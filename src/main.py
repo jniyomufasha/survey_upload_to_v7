@@ -20,7 +20,7 @@ V7_DATASET_SLUG = 'tower-batch-7'
 IMAGE_PREFIX = 'photogrammetry_service/images/'
 MODEL_CONF_THRESHOLD = 0.4
 
-model = YOLO('models/best.pt')
+model = YOLO(os.path.join(THIS_FILE_DIR,'models/best.pt'))
 s3 = boto3.client('s3')
 parser = get_importer("darwin")
 
